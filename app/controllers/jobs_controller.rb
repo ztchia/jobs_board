@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
   before_action :find_job, only: [:show, :edit, :update, :destroy]
+  
   def index
   end
 
