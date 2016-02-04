@@ -2,3 +2,7 @@
 <p> <%= @job.description %> </p>
 <p> <%= @job.company %> </p>
 <p> <%= @job.url %> </p>
+
+<%= link_to "Home", root_path %>
+<%= link_to "Edit", edit_job_path %>
+<%= link_to "Destroy", job_path(@job), method: :delete, data: { confirm: "Are you really sure, you wanna delete this!?"} %>
