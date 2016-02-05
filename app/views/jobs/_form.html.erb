@@ -1,9 +1,10 @@
 <%= simple_form_for @job do |f| %>
-  <%= f.input :title, label: "Job Title" %>
-  <%= f.input :description, label: "Job Desription" %>
-  <%= f.input :company, label: "Company" %>
-  <%= f.input :url, label: "Link for Job" %>
-  <br>
+  
+  <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a category"} %> </br> 	
+  <%= f.input :title, label: "Job Title" %> </br>
+  <%= f.input :description, label: "Job Desription" %> </br>
+  <%= f.input :company, label: "Company" %></br>
+  <%= f.input :url, label: "Link for Job" %></br>
   <%= f.button :submit %>
 
  <% end %>
